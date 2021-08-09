@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <title> Grid Layout</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+<style>
+    body {
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        display: inline;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+
+        grid-template-columns: auto;
+        grid-template-rows: auto 1fr 1fr auto;
+
+        gap: 0.5%;
+        padding: 0.5%;
+    }
+
+    .container div {
+        padding: 10px;
+        border: 1px solid black;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .logo img {
+        max-width: 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .nav-bar {
+        grid-column: 2/7;
+        margin:auto;
+    }
+
+    .login {
+        grid-column: 7/8;
+    }
+
+    .signup {
+        grid-column: 8/9;
+    }
+
+    .footer {
+        grid-area: 4 / 1 / 5 / 9;
+    }
+
+    .name {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        text-align: center;
+    }
+    
+</style>
+
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+                <ul>
+                    <li class="nav-link"><a href="#" id="home">Home</a></li>
+                    <li class="nav-link"><a href="#" id="about">About</a></li>
+                    <li class="nav-link"> <a href="#" id="choose-a-test">Choose a Test</a></li>
+                </ul>
+        </nav>
+
+        <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/3/30/ExpanDriveIcon256.png"></div>
+        <div class="name">Moovie</div>
+        <div class="login">login</div>
+        <div class="signup">signup</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>
