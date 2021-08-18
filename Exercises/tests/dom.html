@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="dom.js"></script>
+    <title>Dom Practice</title>
+</head>
+
+<body>
+    <p id="list-of-names"></p>
+    <p id="problem">1 + 2</p>
+    <button onclick="sum(document.getElementById('problem'))">click</button>
+
+    <p id='change-me'>Change Me!</p>
+    <button onclick="changeMe(document.getElementById('change-me'))">click</button>
+    <p id="change-color">Change color of
+        general area on click</p>
+    <button onclick="randomBackgroundColor(document.getElementById('change-color'))">click</button>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+div {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+p {
+    border: 3px solid rgb(140, 135, 135);
+    max-width: 60px;
+    padding: 20px;
+    line-height: 20px;
+}

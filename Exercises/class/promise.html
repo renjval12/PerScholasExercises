@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+let p= new Promise((resolve, reject)=>{
+let sum = 1+2;
+if (sum==4){
+    resolve("success...");
+}else {
+    reject("failed..");
+}
+})
+
+p.then( (msg)=>{
+ document.write("printing result within then..."+msg);
+}).catch((msg)=>{
+ document.write("printing result within catch..."+msg);
+})
+
+</script>
+</body>
+</html>

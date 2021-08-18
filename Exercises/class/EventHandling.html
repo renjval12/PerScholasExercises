@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h3 id="h3">This example uses the addEventListener() method to listen to the different types of events.</h3>
+
+
+
+  <button id="btnText" onclick="test()">Click here</button>
+
+
+  <p id="p1"></p>
+
+  <p id="p2"> this is para 2</p>
+
+  <p id="p3">This is para3</p>
+
+  <button id="myBtn1">click here </button>
+  <p>
+    <button id="myBtn2" onclick="innerH('p2','new')">Try it</button>
+  </p>
+  <hr>
+  <input type="text" id="fname"> </input>
+
+  <script>
+    function eventFunc(sect, event, func) {
+      document.getElementById(sect).addEventListener(event, func);
+    }
+    //this is the eventListener function
+
+    function innerH(sect, val) {
+      document.getElementById(sect).innerHTML = val;
+
+    }
+    // this it the innerHtml function 
+
+    eventFunc("myBtn2", "click", displayDate)
+    function resetBtnTxt() {
+      document.getElementId("btnText").innerHTML = 'button clicked'
+    }
+
+    function displayDate() {
+      document.getElementById("p1").innerHTML = Date();
+    }
+
+
+    function sum() {
+      let a, b;
+      a = 10;
+      b = 20;
+      return a + b;
+    }
+
+    // eventFunc('myBtn1', 'click', innerH('p2', sum()))
+
+
+    function caseChange() {
+      var x = document.getElementById("fname");
+      document.getElementById("p3").innerHTML = "You wrote: " + x.value.toUpperCase();
+    }
+
+    eventFunc("fname", "input", caseChange)
+  </script>
+
+
+</body>
+
+</html>

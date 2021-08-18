@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  ​
+  ​
+  <h1 id="company"></h1>
+  <p id="p1"></p>
+  <br>
+  <p id="p2"></p>
+  ​
+  <script>
+    var text = "<ul>";
+
+    const COMPANY = "<u>" + "ABC Enterprise Pvt. Limited" + "</u>";
+    var idnum = 0;  //declared globally
+
+    class Employee {
+      static count = 0;
+      constructor(fname, lname) {
+        //instance variables or object variables
+        this.fname = fname;
+        this.lname = lname;
+        this.id = ++idnum;
+      } //closing constuctor 
+
+
+      static countEmployees() {
+        Employee.count++;
+
+      }
+
+
+      displayEmployees() {
+
+
+        text = text + "<li>" + this.id + "  " + this.fullname + "</li>";
+        return text;
+      }
+
+      getFullName() {
+        let fullname = this.fname + " " + this.lname;
+        this.fullname = fullname;
+
+      }
+
+    } //closing employee class
+
+
+
+    document.getElementById("company").innerHTML = COMPANY;
+
+    const emp1 = new Employee("James", "Ford");
+    emp1.getFullName();
+    emp1.displayEmployees();
+    Employee.countEmployees();
+
+
+    const emp2 = new Employee("Alice", "Thompsan");
+    emp2.getFullName();
+    emp2.displayEmployees();
+    Employee.countEmployees();
+
+    const emp3 = new Employee("Joe", "Anderson");
+    emp3.getFullName();
+    emp3.displayEmployees();
+    Employee.countEmployees();
+
+    // const emp4 = new Employee("Jill", "Bravo");
+    // emp4.getFullName();
+    // emp4.displayEmployees();
+    // Employee.countEmployees();
+
+    const emp5 = new Employee("Bill", "Halvorsan");
+    emp5.getFullName();
+    emp5.displayEmployees();
+    Employee.countEmployees();
+
+    text = text + "</ul>";
+    document.getElementById("p1").innerHTML = text;
+    document.getElementById("p2").innerHTML = "Total number of employees working in this company are " + Employee.count;
+
+
+  </script>
+  ​
+</body>
+
+</html>

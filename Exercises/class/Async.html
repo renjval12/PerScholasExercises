@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<h2>Asynchronous JavaScript </h2>
+
+<p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+<h3 id="h31"></h3>
+<h3 id="h32"></h3>
+<p id="p1"></p>
+<h3 id="h33"></h3>
+
+
+setTimeout(myFunction,3000);
+
+setTimeout(() => document.getElementById("h31").innerHTML = "Good Morning!",1300);
+
+
+function myFunction() {
+     document.getElementById("p1").innerHTML = "Hello There!!";
+}
+
+
+
+document.getElementById("h32").innerHTML = "A 'Hello' greeting message will be printing soon";
+document.getElementById("h33").innerHTML = "closing program...";
+
+</script>
+
+
+</body>
+</html>

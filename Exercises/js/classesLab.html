@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal OOPS lab</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <section id="animal-1"> </section>
+
+
+    <script>
+        var details = '<div>'
+        var superPowerInfo = '<div>'
+        class Animal {
+            constructor(type, age, color, legs, superpower) {
+                this.type = type
+                this.age = age
+                this.color = color
+                this.legs = legs
+                this.superpower = superpower
+            }
+            animalSuperPower() {
+                let superPowerInfo = superPowerInfo + `Animal's Super Power: ${this.superpower}`
+                return superPowerInfo
+            }
+            animalDetails() {
+                let details = details + `<p>Animal Type: ${this.type}</p>` + `<p>Animal Age: ${this.age}</p>` + `<p>Animal Color: ${this.color}</p>` + `<p>Amount of Legs: ${this.legs}</p>`
+                return details
+            }
+        }
+
+        let ani1 = new Animal('lion', 2, 'tan', 4, "roaring loudly")
+        ani1.animalSuperPower()
+        ani1.animalDetails()
+        console.log(ani1)
+
+        let ani2 = new Animal('giraffe', 5, 'tan/spotted', 4, 'very tall neck')
+        ani2.animalSuperPower()
+        ani2.animalDetails()
+        console.log(ani2)
+
+        let ani3 = new Animal('giraffe', 5, 'tan/spotted', 4, 'very tall neck')
+        ani3.animalSuperPower()
+        ani3.animalDetails()
+        console.log(ani3)
+
+
+        details = details + '</div>'
+        superPowerInfo = superPowerInfo + '</div>'
+
+        document.getElementById('animal-1').innerHTML = ani1.animalSuperPower
+
+    </script>
+</body>
+
+</html>

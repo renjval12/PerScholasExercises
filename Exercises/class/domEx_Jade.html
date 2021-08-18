@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <link href="domEx_Jade.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id='container'>
+
+        <p id="para1" onclick=" this.style.backgroundColor = 'red' ">Change color of this box on click</p>
+
+
+        <p id="para2" onclick=" this.innerHTML += 'This is that other paragraph text' ">Add another paragraph here on
+            click. </p>
+
+
+        <p id="para3"
+            onclick=" this.innerHTML += ' = ' + (Number(this.innerHTML.split('+')[0]) + Number(this.innerHTML.split('+')[1]))  ">
+            3+3</p>
+
+
+        <p id="para4" onclick=" alert('Hello World!') ">Say hello on click</p>
+
+
+        <p id="para5" onmouseover=" this.style.backgroundColor = 'blue' "
+            onmouseleave=" this.style.backgroundColor = 'black' ">Change background color on mouseover</p>
+
+
+        <p id="para6" onmouseover=" this.style.color = 'orange' " onmouseleave=" this.style.color = 'white' ">Change the
+            color of this text on mouseover</p>
+
+
+        <p id="para7" onclick=" document.getElementById('container').style.backgroundColor = 'blue' ">Change color of
+            general area on click</p>
+
+    </div>
+
+    <script src="test.js"></script>
+    <script>
+        function randomColor(color) {
+            for (i = Math.floor(Math.random() * 255); i <= i;) {
+                
+            }
+        }
+        document.getElementById('container').style.backgroundColor = 'blue'
+    </script>
+
+
+
+</body>
+
+</html>
